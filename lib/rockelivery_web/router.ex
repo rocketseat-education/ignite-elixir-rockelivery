@@ -14,6 +14,7 @@ defmodule RockeliveryWeb.Router do
     get "/", WelcomeController, :index
 
     resources "/users", UsersController, except: [:new, :edit]
+    post "/users/signin", UsersController, :sign_in
 
     post "/items", ItemsController, :create
 
