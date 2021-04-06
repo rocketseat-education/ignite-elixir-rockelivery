@@ -18,7 +18,7 @@ defmodule Rockelivery.Item do
     field :price, :decimal
     field :photo, :string
 
-    many_to_many :orders, Order, join_through: "orders_items"
+    many_to_many :orders, Order, join_through: "orders_items", on_delete: :nothing
 
     timestamps()
   end
